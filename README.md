@@ -95,8 +95,10 @@ Expect multiple rounds. Bots find structural bugs (minutes). Humans find archite
 | Human maintainer | Architecture, naming, scope | Days-weeks |
 | Community | Real-world usage patterns | Ongoing |
 
+**If target repo has no bots:** Use [Named-Persona Adversarial Review](https://github.com/YuhaoLin2005/claude-config) — web-search real engineers' latest philosophies, role-play 3+ rounds of 3 personas each (2 engineers + 1 product). Minimum 9 independent perspectives before submitting. This simulates what bots would catch.
+
 **Gate:**
-- [ ] All bot reviews resolved (PASS/APPROVED)
+- [ ] All bot reviews resolved (PASS/APPROVED) — or 3+ rounds of named-persona review completed
 - [ ] All discovered bugs applied back to your local copy
 - [ ] PR is mergeable
 
@@ -158,7 +160,7 @@ LAUNCH:  github.com/YuhaoLin2005/delivery-gate
 ```
 EXTRACT: Consistency/Completeness/Groundedness/Honesty framework
 FIND:    anthropics/skills (154K★) — document skills, no output quality gate
-         ⚠️ No bots, warned user
+         ⚠️ No bots, hardened via 17-reviewer named-persona review
 HARDEN:  Originality confirmed via web search → PR #1360
 LAUNCH:  Cross-linked to agent-skills session-quality-gate
 ```
@@ -167,9 +169,9 @@ LAUNCH:  Cross-linked to agent-skills session-quality-gate
 ```
 EXTRACT: Four-dimension self-audit + learning capture + disk check
 FIND:    agent-skills (66K★) — REVIEW/SHIP phases, no learning capture
-         ⚠️ No bots, warned user
+         ⚠️ No bots, hardened via 17-reviewer named-persona review
 STATUS:  PR #331 pending human review
-LESSON:  Repos without bots = slower, riskier. But valid if format matches.
+LESSON:  Repos without bots = slower, riskier. Named-persona review compensates.
 ```
 
 ### ❌ RapidOCR wrapper
@@ -201,3 +203,4 @@ A: You can. But community review catches bugs you'll never find alone. Our 200-l
 - [opensource.guide](https://opensource.guide) — Canonical open source contribution guide (complementary, not competing)
 - [delivery-gate](https://github.com/YuhaoLin2005/delivery-gate) — First validated case
 - [agent-skills CONTRIBUTING.md](https://github.com/addyosmani/agent-skills) — Gold standard for skill PRs
+- [Named-Persona Adversarial Review](https://github.com/YuhaoLin2005/claude-config) — Pre-submit hardening for repos without bots
