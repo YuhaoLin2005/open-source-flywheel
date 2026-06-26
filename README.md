@@ -6,7 +6,7 @@
 
 > **The problem:** You've built something useful. You want others to use it. But self-publishing rarely works — most standalone repos get zero traction. Community review is free QA, if you know where to submit.
 >
-> **The solution:** Personal tool → find gap → PR review hardening → standalone launch. 4 rounds of bot review found 9 real bugs in a 200-line script. The same process turns your personal config into a battle-tested contribution.
+> **The solution:** Personal tool → find gap → PR review hardening → standalone launch. 4 rounds of bot review found 9 real bugs in a 200-line script.
 
 ---
 
@@ -62,6 +62,8 @@ Match their format. Single commit. PR: what + why complementary + what gap.
 
 **No bots?** Use [Named-Persona Adversarial Review](https://github.com/YuhaoLin2005/claude-config) — web-search real engineers' philosophies, 3+ rounds × 3 personas (2 eng + 1 product). Simulates what bots catch.
 
+**Bottleneck:** Human review is the slowest step. To pipeline: start FIND for the next tool while HARDENing the current one.
+
 **Gate:** All bots/personas resolved. Bugs applied locally. PR mergeable.
 
 **Stuck 2+ weeks?** Comment. 4 weeks? Launch with review alone.
@@ -74,21 +76,19 @@ Push hardened code. README: what/why/install/examples. License compatible. Link 
 
 ---
 
-## Attribution Standards
-
-- **Code deps:** Link upstream, state what it provides
-- **Format inspiration:** "Inspired by [repo]'s [pattern]"
-- **Review feedback:** Thank reviewers by name
-- **Borrowed methodology:** agent-skills invented Rationalizations + Red Flags — credited
-
----
-
 ## Validated Cases
 
-**✅ delivery-gate:** CLAUDE.md → ECC (100K★, ✅bots) → 4 rounds, 9 bugs → [repo](https://github.com/YuhaoLin2005/delivery-gate)
-**✅ self-audit:** 4-dim framework → anthropics/skills (154K★, ⚠️no bots, 17-reviewer hardened) → PR #1360
-**⚠️ session-quality-gate:** → agent-skills (66K★, ⚠️no bots, 17-reviewer hardened) → PR #331 pending
-**❌ RapidOCR:** Failed originality. Credited RapidAI.
+### ✅ Successes
+
+**delivery-gate:** CLAUDE.md → ECC (100K★, ✅bots) → 4 rounds, 9 bugs → [repo](https://github.com/YuhaoLin2005/delivery-gate)
+**self-audit:** 4-dim framework → anthropics/skills (154K★, ⚠️no bots, 17-reviewer hardened) → PR #1360
+**open-source-flywheel:** This methodology → self-reviewed via 3 rounds named-persona → this repo
+
+### ❌ Failures / Lessons
+
+**RapidOCR wrapper:** Failed originality check (thin wrapper). Method correctly filtered it out at Pre-Flight. Lesson: Pre-Flight works.
+**session-quality-gate:** Submitted to agent-skills (no bots). No response after 24h. Valid submission but bottleneck is human availability. Lesson: bot presence matters.
+**compact-counter dev.to post:** HN rejected (new account), Reddit blocked (low karma), dev.to worked. Lesson: distribution channel matters as much as code quality.
 
 ---
 
