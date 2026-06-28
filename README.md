@@ -1,7 +1,7 @@
 # Open Source Flywheel
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Validated](https://img.shields.io/badge/validated-6%20cases-brightgreen.svg)](#validated-cases)
+[![Validated](https://img.shields.io/badge/validated-7%20cases-brightgreen.svg)](#validated-cases)
 [![Reviewed](https://img.shields.io/badge/reviewed-24%20personas-orange.svg)](#)
 
 > **The problem:** You've built something useful. Self-publishing rarely works. Community review is free QA — if you know where to submit.
@@ -18,7 +18,7 @@
 - [ ] **General?** No personal paths, secrets, or machine-specific config.
 - [ ] **<500 lines?** Smaller = faster review. If larger, extract the core.
 
-**⚠️ No review bots in target repo?** Warn user. Use [Named-Persona Adversarial Review](https://github.com/YuhaoLin2005/claude-config) — 3+ rounds, 3 personas each (2 engineers + 1 product). Minimum 9 independent perspectives before submitting.
+**⚠️ No review bots in target repo?** Warn user. Use [Named-Persona Adversarial Review](https://github.com/YuhaoLin2005/dual-pool-review) — 3+ rounds, 3 personas each (2 engineers + 1 product). Minimum 9 independent perspectives before submitting.
 
 ---
 
@@ -67,9 +67,15 @@ After launching: What worked? What broke? Update validated cases. The flywheel i
 ## Validated Cases
 
 **✅ delivery-gate:** ECC (100K★, ✅bots) → 4 rounds, 9 bugs → [repo](https://github.com/YuhaoLin2005/delivery-gate)
-**✅ self-audit:** anthropics/skills (154K★, ⚠️no bots, 17-reviewer hardened) → PR #1360
+**✅ self-audit:** anthropics/skills (154K★, ⚠️no bots, 17-reviewer hardened) → PR #1361
+**✅ dual-pool-review:** alirezarezvani/claude-skills (18.7K★) → PR #866
+**✅ adversarial-review:** anthropics/skills → SKILL.md format → PR #1361
+**✅ format-consistency:** NextFrontierBuilds/agent-best-practices → AGENTS.md anti-pattern → [PR #1](https://github.com/NextFrontierBuilds/agent-best-practices/pull/1)
+**✅ format-consistency-article:** DEV.to → cross-posted from PR → [article](https://dev.to/yuhaolin2005/your-ai-config-files-are-fighting-each-other-13c7)
 **✅ flywheel:** → 8 rounds, 24 persona views → this repo
 **❌ RapidOCR:** Pre-Flight filtered — thin wrapper. **❌ session-quality-gate:** no bots, no response. **❌ compact-counter:** channel blocked by karma requirements.
+
+---
 
 ## FAQ
 
@@ -77,4 +83,4 @@ After launching: What worked? What broke? Update validated cases. The flywheel i
 
 ## See Also
 
-[delivery-gate](https://github.com/YuhaoLin2005/delivery-gate) · [opensource.guide](https://opensource.guide) · [agent-skills](https://github.com/addyosmani/agent-skills) · [Named-Persona Review](https://github.com/YuhaoLin2005/claude-config)
+[delivery-gate](https://github.com/YuhaoLin2005/delivery-gate) · [dual-pool-review](https://github.com/YuhaoLin2005/dual-pool-review) · [opensource.guide](https://opensource.guide) · [agent-skills](https://github.com/addyosmani/agent-skills)
